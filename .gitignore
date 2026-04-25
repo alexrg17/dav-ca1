@@ -12,8 +12,6 @@ __pycache__/
 dist/
 build/
 
-# Raw data (too large / sourced externally)
-data/raw/
 
 # OS
 .DS_Store
