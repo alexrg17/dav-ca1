@@ -1,7 +1,7 @@
 # Cybersecurity Readiness Index (CRI)
 
 DAV CA1 | BSc (Honours) Computing in Software Development | DKIT  
-Author: Alex Radu | Due: 10 May 2026
+Author: Alexandru Gabriel Radu (D00258114) | Due: 20 May 2026
 
 ## What this project is
 
@@ -9,17 +9,17 @@ For this CA I built a composite indicator called the Cybersecurity Readiness Ind
 
 The CRI is broken down into four sub-indices:
 
-- **Technical Capacity** - internet penetration, broadband subscriptions, number of CERTs
-- **Legal and Regulatory Framework** - cybercrime legislation, data protection laws
-- **Capacity Building** - education programmes, R&D spending, certified professionals
-- **Organisational Measures** - national strategy published, government CIRT, public-private partnerships
+- **Technical Capacity** - internet penetration, GCI technical pillar score, NCSI overall score
+- **Legal and Regulatory Framework** - GCI legal pillar score
+- **Capacity Building** - GCI capacity development pillar score
+- **Organisational Measures** - GCI organisational and cooperation pillar scores
 
 ## Data sources
 
-- NCSI (National Cyber Security Index) - https://ncsi.ega.ee
-- ITU Global Cybersecurity Index 2024 - https://www.itu.int/en/ITU-D/Cybersecurity/Pages/global-cybersecurity-index.aspx
-- World Bank Open Data - https://data.worldbank.org
-- UN Human Development Index - https://hdr.undp.org/data-center/human-development-index
+- Kaggle Cyber Security Indexes dataset (GCI, NCSI, DDL scores)
+- ITU Global Cybersecurity Index 2024 pillar scores via World Bank Data360
+- World Bank Open Data (internet penetration, GDP per capita)
+- UN Human Development Index 2023
 
 The dataset covers 35 countries across a range of income levels and regions.
 
@@ -31,14 +31,13 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Download the raw data files and place them in `data/raw/`:
+Place the raw data files in `data/raw/`:
 
-- `ncsi.csv` from https://ncsi.ega.ee
-- `itu_gci_2024.csv`
-- `worldbank_internet.csv`
-- `worldbank_broadband.csv`
-- `worldbank_gdp.csv`
-- `hdi_2023.csv`
+- `cyber_security_kaggle.csv` - from Kaggle
+- `ITU_GCI.csv` - from World Bank Data360
+- `worldbank_internet.csv` - World Bank IT.NET.USER.ZS
+- `worldbank_gdp.csv` - World Bank NY.GDP.PCAP.CD
+- `HDR_HDI.xlsx` - UN HDR Statistical Annex
 
 Then launch Jupyter and run the notebooks in order:
 
